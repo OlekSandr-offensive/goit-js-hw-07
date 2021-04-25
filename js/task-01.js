@@ -1,14 +1,12 @@
-// Напиши скрипт, який виконає наступні операції.
 
-// Порахує і виведе в консоль кількість категорій в ul#categories, 
-// тобто елементів li.item.Вийде 'У списку 3 категорії.'.
+const category = document.querySelector("ul#categories");
+const quontityOfCategory = category.children.length;
 
-// Для кожного елемента li.item в списку ul#categories, знайде і виведе в консоль текст заголовка елемента 
-// (тега h2) і кількість елементів в категорії(всіх вкладених в нього елементів li).
+console.log(`У списку ${quontityOfCategory} категорії.`);
 
-// Наприклад, для першої категорії вийде:
+const categoryElem = document.querySelectorAll(".item");
 
-// Категорія: Тварини
-// Кількість елементів: 4
-
-const 
+const nameOfElem = categoryElem.forEach((elem) => {
+    console.log(`- Категорія: ${elem.firstElementChild.textContent}`);
+    console.log(`- Кількість елементів: ${elem.querySelectorAll("li").length}`);
+});
