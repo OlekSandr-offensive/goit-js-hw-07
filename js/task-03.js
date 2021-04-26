@@ -54,5 +54,5 @@ const sortRes = images.map((elem) => {
   const imageEl = document.createElement("img");
   imageEl.src = elem.url;
   imageEl.alt = elem.alt;
- navElem.insertAdjacentHTML('afterbegin', `<li><img src='${elem.url}' alt='${elem.alt}'></li>`);
+ navElem.insertAdjacentHTML('afterbegin', `<li class="item"><img class="image" src='${elem.url}' alt='${elem.alt}'></li>`);
 });
