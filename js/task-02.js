@@ -8,8 +8,9 @@ const ingredients = [
 ];
 
 const navElem = document.querySelector('#ingredients');
-const sortRes = ingredients.forEach((elem) => {
-  const itemEl = document.createElement("li");
-    itemEl.textContent = elem;
-  navElem.appendChild(itemEl);
+const sortRes = ingredients.map(elem => {
+  const titleEl = document.createElement('li');
+  titleEl.textContent = elem;
+  return titleEl;
 });
+navElem.append(...sortRes);
